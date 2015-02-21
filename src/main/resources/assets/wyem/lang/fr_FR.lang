@@ -1,0 +1,11 @@
+
+## Items ##
+item.skeleton_crown.name=Couronne squelettique
+item.zombie_crown.name=Couronne du zombie
+item.creeper_crown.name=Couronne du creeper
+item.wither_crown.name=Couronne du wither
+item.ender_chestplate.name=Plastron de l'ender
+item.spider_treads.name=Fils d'araignée
+item.head_collector.name=Collectionneur de tête
+
+itemGroup.tabWYEM=WYEM
