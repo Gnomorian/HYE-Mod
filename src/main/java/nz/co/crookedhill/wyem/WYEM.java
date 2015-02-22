@@ -25,7 +25,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class WYEM
 {
 	public static final String MODID = "wyem";
-	public static final String VERSION = "0.1.1.3";
+	public static final String VERSION = "0.1.1.4";
 	
 	@SidedProxy(clientSide="nz.co.crookedhill.wyem.proxy.ClientProxy", serverSide="nz.co.crookedhill.wyem.proxy.CommonProxy")
 	public static ClientProxy proxy;
@@ -48,6 +48,7 @@ public class WYEM
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		network = NetworkRegistry.INSTANCE.newSimpleChannel("wyemnetwork");
 		network.registerMessage(DamageMessageHandler.class, DamageMessage.class, 0, Side.SERVER);
 		WYEMConfigHelper.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + WYEM.MODID + File.separator + WYEM.MODID + ".cfg"));
 	}
